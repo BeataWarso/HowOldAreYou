@@ -18,7 +18,7 @@ public class HowOldAreYou {
 				if (input.matches("\\d{4}-\\d{2}-\\d{2}")) {
 					LocalDate parsedInput = LocalDate.parse(input);
 					LocalDate now = LocalDate.now();
-					Period day = Period.between(parsedInput, now);
+
 					long days = ChronoUnit.DAYS.between(parsedInput, now);
 					long age = ChronoUnit.YEARS.between(parsedInput, now);
 
